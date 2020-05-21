@@ -9,5 +9,5 @@ Postman API was used for testing.
 
 Command to run the code - npm start(in terminal)
 
-use the links to check the crud operations in Postman API
+The urls are checked for the crud operations in Postman API
 eg. http://localhost:3000/event - get request
