@@ -9,9 +9,15 @@ const teamRoutes = require('./api/routes/team');
 const orgRoutes = require('./api/routes/organization');
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb+srv://madhu:' + process.env.MONG_ATLAS_PW + '@cluster0-bwyon.mongodb.net/test?retryWrites=true&w=majority',{
-    useMongoClient: true
-});
+mongoose.connect(
+    "mongodb+srv://madhu:" + 
+    process.env.MONG_ATLAS_PW + 
+    "@cluster0-bwyon.mongodb.net/test?retryWrites=true&w=majority",
+    {
+        useNewUrlParser: true,
+        useUnifiedTopology: true
+    }
+);
 
 app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({extended: false}));
